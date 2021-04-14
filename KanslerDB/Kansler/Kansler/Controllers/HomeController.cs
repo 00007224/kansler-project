@@ -20,9 +20,9 @@ namespace Kansler.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Products()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Your products page.";
 
             return View();
         }

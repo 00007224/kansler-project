@@ -1,4 +1,43 @@
-﻿body {
+﻿@font-face {
+    font-family: 'Libre Baskerville';
+    src: url(../fonts/libre-baskerville/LibreBaskerville-Regular.otf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Libre Baskerville';
+    src: url(../fonts/libre-baskerville/LibreBaskerville-Italic.otf);
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Libre Baskerville';
+    src: url(../fonts/libre-baskerville/LibreBaskerville-Bold.otf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/roboto/Roboto-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/roboto/Roboto-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/roboto/Roboto-Italic.ttf);
+    font-style: italic;
+}
+
+
+
+
+body {
     padding-top: 50px;
     padding-bottom: 20px;
 }
@@ -21,4 +60,50 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+.kansler-logo {
+    width: 40px;
+    height: 40px;
+    margin-top: 4px;
+}
+
+.navbar > .container > .navbar-header {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.navbar {
+    background-color: #016E37;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.navbar .navbar-header a {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: #FFF;
+}
+
+.navbar .navbar-collapse {
+    margin-left: 210px;
+}
+
+.nav > li > a {
+    color: #FFF !important;
+    font-family: Roboto, sans-serif;
+    transition: .1s;
+}
+
+.nav > li > a:hover {
+    border-bottom: 2px solid #FFFFFFCC;
+    opacity: .8;
+}
+
+.nav > li.active {
+    background-color: transparent !important;
+}
+
+.nav > li.active > a {
+    border-bottom: 2px solid #FFF;
+    background-color: transparent !important;
 }
