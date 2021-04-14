@@ -107,3 +107,59 @@ textarea {
     border-bottom: 2px solid #FFF;
     background-color: transparent !important;
 }
+
+footer {
+    position: absolute;
+    background-color: #292929;
+    width: 98.9vw;
+    left: 0;
+    bottom: 0;
+    top: 650px;
+    height: 180px;
+    color: #BCBCBC;
+    font-family: Roboto;
+    font-size: 11px;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer .container div {
+    width: 30%;
+}
+
+footer .container div h3 {
+    font-size: 16px;
+    color: #FFF;
+}
+
+.about-us p {
+    width: 80%;
+}
+
+.quick-links .nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.quick-links .nav > li > a {
+    color: #BCBCBC !important;
+    padding: 10px;
+}
+
+.quick-links .nav > li.active > a {
+    border-bottom: none;
+    text-decoration: underline;
+    color: #FFF !important;
+}
+
+.quick-links .nav > li > a:hover {
+    background-color: transparent;
+    border-bottom: none;
+    color: #FFF !important;
+    opacity: 1;
+}

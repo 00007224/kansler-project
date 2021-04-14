@@ -32,7 +32,28 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <div class="container">
+                <div class="about-us">
+                    <h3>About Us</h3>
+                    <p>We are a network of large retail stores, which main purpose is to provide office supplies, such as: stationery, household goods, furniture and office electronics.</p>
+                </div>
+                <div class="quick-links">
+                    <h3>Quick Links</h3>
+                    <ul class="nav navbar-nav">
+                        <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "active" : "")">@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Products" ? "active" : "")">@Html.ActionLink("Products", "Products", "Home")</li>
+                        <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "About" ? "active" : "")">@Html.ActionLink("About", "About", "Home")</li>
+                    </ul>
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Info</h3>
+                    <p>Email: info@kansler.uz</p>
+                    <p>Monday - Friday: 9:00am - 6:00pm</p>
+                    <p>Saturday: 9:00am - 4:00pm</p>
+                    <p>Sunday: weekday</p>
+                    <p class="company-tel">+998 (78) 148-44-44</p>
+                </div>
+            </div>
         </footer>
     </div>
 
