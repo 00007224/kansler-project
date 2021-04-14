@@ -38,18 +38,27 @@ namespace Kansler.DAL
                             var prd = new Product();
                             prd.ID = rdr.GetInt32(rdr.GetOrdinal("ID"));
                             prd.Name = rdr.GetString(rdr.GetOrdinal("Name"));
-                            /*тип данных image*/
-                            prd.Image = rdr.GetInt32(rdr.GetOrdinal("Image"));
+                            /*тип данных image
+                            prd.Image = rdr.GetInt32(rdr.GetOrdinal("Image"));*/
+                            
                             prd.Description = rdr.GetString(rdr.GetOrdinal("Description"));
                             prd.Category = rdr.GetInt32(rdr.GetOrdinal("Category"));
-                            prd.Price = rdr.GetInt32(rdr.GetOrdinal("Price"));
-                            prd.Barcode = rdr.GetInt32(rdr.GetOrdinal("Barcode"));
-                            prd.Quantity = rdr.GetInt32(rdr.GetOrdinal("Quantity"));
-                            prd.Warehouse = rdr.GetInt32(rdr.GetOrdinal("Warehouse"));
-                            prd.SupplierName = rdr.GetInt32(rdr.GetOrdinal("SupplierName"));
-                            prd.SupplyDate = rdr.GetDateTime(rdr.GetOrdinal("Supplydate"));
-                            prd.SupplierCountry = rdr.GetInt32(rdr.GetOrdinal("SupplyCountry"));
-                            prd.IsInStock = rdr.GetInt32(rdr.GetOrdinal("InInStock"));
+                            
+                                prd.Price = rdr.GetInt32(rdr.GetOrdinal("Price"));
+                            
+                                prd.Barcode = rdr.GetInt32(rdr.GetOrdinal("Barcode"));
+                            
+                                prd.Quantity = rdr.GetInt32(rdr.GetOrdinal("Quantity"));
+                            
+                                prd.Warehouse = rdr.GetInt32(rdr.GetOrdinal("Warehouse"));
+                            
+                                prd.SupplierName = rdr.GetInt32(rdr.GetOrdinal("SupplierName"));
+                            
+                                prd.SupplyDate = rdr.GetDateTime(rdr.GetOrdinal("Supplydate"));
+                            
+                                prd.SupplierCountry = rdr.GetInt32(rdr.GetOrdinal("SupplierCountry"));
+                            
+                                prd.IsInStock = rdr.GetInt32(rdr.GetOrdinal("IsInStock"));
 
                             products.Add(prd);
                         }
