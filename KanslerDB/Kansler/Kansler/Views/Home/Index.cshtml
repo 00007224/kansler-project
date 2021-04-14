@@ -10,24 +10,62 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+<section class="for-you">
+    <div class="container">
+        <h2>For you</h2>
+        <div class="divider"></div>
+        <div class="categories">
+            <div class="row category">
+                <div class="category-circle">
+                    <i class="fas fa-archive"></i>
+                </div>
+                <a href="#">Sample Category</a>
+            </div>
+
+            <div class="row category">
+                <div class="category-circle">
+                    <i class="fas fa-archive"></i>
+                </div>
+                <a href="#">Sample Category</a>
+            </div>
+
+            <div class="row category">
+                <div class="category-circle">
+                    <i class="fas fa-archive"></i>
+                </div>
+                <a href="#">Sample Category</a>
+            </div>
+
+            <div class="row category">
+                <div class="category-circle">
+                    <i class="fas fa-archive"></i>
+                </div>
+                <a href="#">Sample Category</a>
+            </div>
+
+            <div class="row category">
+                <div class="category-circle">
+                    <i class="fas fa-archive"></i>
+                </div>
+                <a href="#">Sample Category</a>
+            </div>
+
+            <div class="row category">
+                <div class="category-circle">
+                    <i class="fas fa-archive"></i>
+                </div>
+                <a href="#">Sample Category</a>
+            </div>
+        </div>
+        <div class="btn btn-default">
+            @Html.ActionLink("Browse All", "Products", "Home", new { area = "" }, new { @class = "btn-info" })
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+</section>
+
+@*<section class="register-email">
+    <h3>Be a Part of Our Family & Get Everything In Your E-mail Address</h3>
+    <div class="input-group">
+        <input type="email" name="Email" value="" title="Enter your e-mail..." class="input-lg" />
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+</section>*@
