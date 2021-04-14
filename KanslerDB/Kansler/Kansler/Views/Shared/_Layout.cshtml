@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -11,27 +12,48 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
+                <img src="~/Content/images/kansler_logo.jpg" alt="Kansler" class="kansler-logo" />
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Kansler", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "active" : "")">@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Products" ? "active" : "")">@Html.ActionLink("Products", "Index", "Product")</li>
+                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "About" ? "active" : "")">@Html.ActionLink("About", "About", "Home")</li>
                 </ul>
             </div>
         </div>
     </div>
-    <div class="container body-content">
+    <div class="body-content">
         @RenderBody()
-        <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <div class="container">
+                <div class="about-us">
+                    <h3>About Us</h3>
+                    <p>We are a network of large retail stores, which main purpose is to provide office supplies, such as: stationery, household goods, furniture and office electronics.</p>
+                </div>
+                <div class="quick-links">
+                    <h3>Quick Links</h3>
+                    <ul class="nav navbar-nav">
+                        <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "active" : "")">@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Products" ? "active" : "")">@Html.ActionLink("Products", "Index", "Product")</li>
+                        <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "About" ? "active" : "")">@Html.ActionLink("About", "About", "Home")</li>
+                    </ul>
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Info</h3>
+                    <p>Email: info@kansler.uz</p>
+                    <p>Monday - Friday: 9:00am - 6:00pm</p>
+                    <p>Saturday: 9:00am - 4:00pm</p>
+                    <p>Sunday: weekday</p>
+                    <p class="company-tel">+998 (78) 148-44-44</p>
+                </div>
+            </div>
         </footer>
     </div>
 
